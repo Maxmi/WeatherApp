@@ -12,7 +12,6 @@ const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=impe
       });
       res.on('end', () => {
         body = JSON.parse(body);
-        // console.log(body);
         if(body.message === "Nothing to geocode") {
           console.log('Please enter a city');
           return;
